@@ -15,3 +15,10 @@ for order in orders:
         revenue += order["total"]
 
 print(f"Revenue (excluding cancelled): Rs {revenue:,}")
+
+
+print("Pending orders:")
+
+for order in orders:
+    if order["status"] == "pending":
+        print(f"  {order['id']}  {order['customer']}  Rs {order['total']:,}")
