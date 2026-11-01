@@ -7,3 +7,11 @@ orders = [
 ]
 
 print(f"Orders today: {len(orders)}")
+
+revenue = 0
+
+for order in orders:
+    if order["status"] != "cancelled":
+        revenue += order["total"]
+
+print(f"Revenue (excluding cancelled): Rs {revenue:,}")
